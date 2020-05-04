@@ -1,37 +1,9 @@
-## Welcome to GitHub Pages
+# Five Months in Edinburgh
 
-You can use the [editor on GitHub](https://github.com/SerenaHuang19/serenahuang19.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+I went on exchange to the University of Edinburgh from January 10th to June 1st, 2018. During these five months, I kept a journal of my daily experiences and adventures, which I later produced as a book. [This website](https://serenahuang19.github.io) aims to share the content of the book in an interactive and hopefully interesting way. I hope you enjoy!
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+All photographs and text are mine and taken directly from the original book. 
 
-### Markdown
+For each day of my exchange, there is a photograph (not necessarily taken that day, but taken in that month), as well as a wordcloud representing the 25 words with the highest [tf-idf scores](https://en.wikipedia.org/wiki/Tf%E2%80%93idf) from that day, and finally a sentence pulled from that day's journal entry containing one or more of the words from that wordcloud. The code used to generate the tf-idf scores can be found [here](https://github.com/SerenaHuang19/text_analyses/blob/master/five_months_in_edinburgh_raw.ipynb).
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/SerenaHuang19/serenahuang19.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+In the Extras section, 'Overheard on Exchange' features out-of-context quotes pulled from the text using regex, while 'A Sprinkle of Starlight' collects miscellaneous text pieces that can also be found on my writing and poetry blog, [A Sprinkle of Starlight](https://asprinkleofstarlight.tumblr.com/).
