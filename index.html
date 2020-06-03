@@ -124,39 +124,50 @@ header {
     height: 100vh;
     top: 100vh;
     position: relative;
-    background-color: white;
+    background-color: #D1C4BA;
 }
 
 .w3-bar {
     margin: auto;
-    position: relative;
+    /* position: relative; */
+    position: sticky;
+    top: 0vh;
+    z-index: 0;
     width: 100vw;
-    height: 16.5vh;
-    padding: 1.5vw 3vw 1.5vw 6vw;
+    height: 15vh;
+    padding: 0;
+    padding: 1vw 0vw 1vw 0vw;
+    align-items: center;
+    background-color: #D1C4BA;
+    transition:all 0.5s ease-in-out;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
 }
 
 .w3-bar-item {
     margin: auto; 
     position: relative;
-    width: 7.5vw; 
-    height: 14vh; 
-    border-radius: 50%;
-    margin-left: 2.3vw;
-    margin-right: 2.3vw;
-    font-family: 'Playfair Display', serif;
-    font-size: 24px;
-    color: white;
+    width: 14.01vw; 
+    height: 15vh; 
+    /* border-radius: 50%; */
+    /* margin-left: 0vw; */
+    /* margin-right: 0vw; */
+    margin: 0vw;
+    padding: 0;
     background-color: #9B7D65;
     background-origin: none;
+    border: 0;
     transition:all 0.5s ease-in-out;
 }
 
 .w3-bar-item:hover {
-    width: 10vw;
-    height: 16.5vh;
-    transform: scale(1.1, 1.25); 
     background-size: cover;
-    padding: 0%;
+    transition:all 0.5s ease-in-out;
+}
+
+.w3-bar-item:hover .button-text{
+    /* font-size: 32px; */
+    letter-spacing: 5px;
 }
 
 .w3-button0:hover {
@@ -181,6 +192,38 @@ header {
     background-image: url(images/extras.jpeg);
 }
 
+.button-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: white;
+    transition:all 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 900px) {
+    .w3-button6 {
+        grid-column-start: 3;
+        grid-column-end: 5;
+    }
+    .w3-bar {
+        /* height: 30vh; */
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: auto auto auto auto;
+        margin: 0;
+        padding: 0;
+    }
+    .w3-bar-item {
+        width: 100%;
+        height: 5vh;
+        padding: 0vh 0vw 0vh 0vw;
+        margin: 0;
+    }
+    .w3-bar-item:hover .button-text{
+    letter-spacing: 2px;
+}
+}
+
 .monthdiv {
     width: 100%;
     top: 0vh;
@@ -198,15 +241,6 @@ header {
     padding-right: 12vh;
     color: white;
     letter-spacing: 2vw;
-}
-
-.mtcontainer {
-    height: 78vh;
-    background-color: #D1C4BA;
-    width: 100%;
-    margin: auto;
-    z-index: 0;
-    position: relative;
 }
 
 /* ============================================== ABOUT ============================================== */
@@ -336,7 +370,52 @@ header {
     letter-spacing: 1px;
 }
 
+@media screen and (max-width: 900px) {
+    .aboutbox {
+        background-color: white;
+        height: 235vh;
+    }
+    .abttext {
+        width: 61vw;
+        height: 200vh;
+    }
+    .abtphoto2 {
+        position: absolute;
+        left: 0%;
+        top: 180vh;
+        width: 100vw;
+        height: 59vw;
+        background-color: rgba(0, 0, 0, 0.0);
+}
+    .img2 {
+        width: 60vw;
+        height: 70vw;
+        margin-top: 1vh;
+        right: 0;
+        bottom: 0;
+    }
+    .img3 {
+        width: 39vw;
+        height: 39vw;
+    }
+    .abtquote {
+        height: 200vh;
+    }
+}
+
 /* ==================================== EXTRAS ========================================== */
+
+.mtcontainer {
+    height: 78vh;
+    background-color: #D1C4BA;
+    width: 100%;
+    margin: auto;
+    z-index: 0;
+    position: relative;
+    top: 15vh; 
+    display: grid; 
+    grid-template-columns: auto auto auto;
+}
 
 .ext3 { 
     height: 100%;
@@ -445,7 +524,7 @@ header {
     background-color: rgba(0,0,0,0.8); 
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 99999999;
     margin: auto;
     animation: fading 0.5s;
     animation-timing-function: ease-in-out;
@@ -455,6 +534,51 @@ header {
     0%{opacity:0}
     100%{opacity:1}
     }
+
+ @media screen and (max-width: 900px) {
+    .ext3 { 
+        height: 43vh;
+        width: 100vw;
+    }
+    .mtcontainer {
+        height: 129vh;
+        display:grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: auto;
+    }
+    .extbutton {
+        top: 8vh;
+    }
+    .ext3desc {
+        top: 15%;
+    }
+    .close {
+        top: 2vh;
+        font-size: 14vh;
+        font-weight: bold;
+        line-height: 5vh;
+        position: fixed;
+        left: 47vw;
+        transition:all 0.5s ease-in-out;
+    }
+
+    .go-left, .go-right {
+        top: 2vh;
+        font-size: 12vh;
+        font-weight: bold;
+        line-height: 5vh;
+        padding: 2vw;
+        position: relative;
+        transition:all 0.5s ease-in-out;
+    }
+    .go-left {
+    float: left;
+    }
+
+    .go-right {
+    float: right;
+    }
+ }
 
 /* ======================================= MONTHLY MODALS ================================================================ */
 
@@ -483,6 +607,12 @@ header {
     background-color: white;
 }
 
+@media screen and (max-width: 900px) {
+    .calendar {
+        grid-template-columns: auto auto auto;
+    }
+}
+
 .twentyfivewords {
     top: 0;
     position: relative;
@@ -506,6 +636,7 @@ header {
     background: #9B7D65; 
     border-radius: 3px;
 }
+
 /* LEFT SIDE STUFF ============================================================== */
 .photo {
     width: 20vh;
@@ -600,7 +731,34 @@ header {
     z-index: 99999;
     text-transform: capitalize;
     font-size: 42px;
-}            
+}    
+
+@media screen and (max-width: 900px) {
+    .twentyfivetext {
+        left: 0vh;
+        /* top: 75vh; */
+        position: relative;
+        z-index: 99999;
+        visibility: visible;
+        width: 100vw;
+        background-color: white;
+        /* overflow: scroll; */
+    }
+    .photolarge {
+        width: 100vw;
+        height: 75vw;
+        z-index: 9999;
+        position: relative;
+    }
+    .photolarge2 {
+        width: 56.25vw;
+        height: 75vw;
+        z-index: 9999;
+        position: relative;
+        margin: auto;
+        left: 25%;
+    }
+}
 
 /* ============================================== OVERHEARD ============================================== */
 
@@ -854,6 +1012,62 @@ header {
     margin-bottom: 0%;
     padding: 10%;
 }
+
+@media screen and (max-width: 900px) {
+    .twentyfivewords {
+        width: 100vw;
+        height: 90vh;
+        top: 4vh;
+        overflow: scroll;
+        position: relative;
+    }
+    .ohcontainer, .songdiv, .boxss {
+        top: 6vh;
+        width: 100vw;
+        /* height: 150vh; */
+        overflow: scroll;
+        position: relative;
+    }
+    .extitle {
+        width: 100vw;
+        height: 6vh;
+        position: relative;
+        background-color: #D1C4BA;
+        margin: auto;
+        top: 6vh;
+    }
+    .extitletext {
+        font-family: 'Playfair Display', serif;
+        font-size: 28px;
+        text-align: left;
+        text-align: center;
+        letter-spacing: 5px;
+    }
+    .songdiv {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+    }
+    .pltitle {
+        font-family: 'Nanum Myeongjo', serif; 
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+    .songs {
+        width: 96.5vw;
+        top: 70vw;
+    }
+    .songbox {
+        background-size: 100vw 70vw;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 100vh;
+        overflow: scroll; 
+        top: 0vh;
+    }
+    .ohcanvas {
+        height: 750vh;
+    }
+}
 </style>
     <script language = "javascript" type = "text/javascript" src = "five_months.js"> </script>
 </head>
@@ -867,13 +1081,13 @@ header {
     </header>
     <div class = "everything" id = "topbar">
         <div class="w3-bar w3-black">
-            <button class="w3-bar-item w3-button0" onclick="openpost('abt')">About</button>
-            <button class="w3-bar-item w3-button1" onclick="openpost('jan')" >Jan</button>
-            <button class="w3-bar-item w3-button2" onclick="openpost('feb')">Feb</button>
-            <button class="w3-bar-item w3-button3" onclick="openpost('mar')">Mar</button>
-            <button class="w3-bar-item w3-button4" onclick="openpost('apr')">Apr</button>
-            <button class="w3-bar-item w3-button5" onclick="openpost('may')">May</button>
-            <button class="w3-bar-item w3-button6" onclick="openpost('ext')">Extras</button>
+            <button class="w3-bar-item w3-button0" onclick="openpost('abt')"><span class = "button-text">About</span></button>
+            <button class="w3-bar-item w3-button1" onclick="openpost('jan')"><span class = "button-text">Jan</span></button>
+            <button class="w3-bar-item w3-button2" onclick="openpost('feb')"><span class = "button-text">Feb</span></button>
+            <button class="w3-bar-item w3-button3" onclick="openpost('mar')"><span class = "button-text">Mar</span></button>
+            <button class="w3-bar-item w3-button4" onclick="openpost('apr')"><span class = "button-text">Apr</span></button>
+            <button class="w3-bar-item w3-button5" onclick="openpost('may')"><span class = "button-text">May</span></button>
+            <button class="w3-bar-item w3-button6" onclick="openpost('ext')"><span class = "button-text">Extras</span></button>
           </div>
     <div id="abt" class="w3-container post">
         <div class = "aboutbox" id = "abt">
@@ -2918,7 +3132,7 @@ header {
                 EXTRAS
             </p>
         </div>
-        <div class = "mtcontainer" style = "top: 15vh; display: grid; grid-template-columns: auto auto auto;">
+        <div class = "mtcontainer">
             <div class = "ext3" style = "background-color: #9B7D65;">
                 <p class = "ext3desc" style = "color: white;">
                     Travel Playlists <br>
@@ -3003,7 +3217,7 @@ header {
                 <p class = "ext3desc" style = "color: #9B7D65;">
                     Overheard on Exchange <br>
                     <p class = "ext3desc" style = "color: #9B7D65; font-size: 20px; padding: 3vh 5vh 0vh 5vh;">
-                        snippets of conversation and dialogue & glimpses into everyday life
+                        snippets of conversation and dialogue & glimpses of everyday life
                     </p>
                 </p>
                 <div class = "extbuttonwrapper">
