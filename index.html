@@ -835,15 +835,27 @@ header {
     border: 10px #9B7D65 solid;
 }
 
-.pltitle:hover{
-    background-color: #9B7D65;
-    transition:all .8s ease-in-out;
+.ytlink {
+    text-decoration: none;
+    font: 20px;
+    letter-spacing: 2px;
+    margin-top: 0;
+    transition:all 0.5s ease-in-out;
+}
+
+a:hover, a:visited, a:link, a:active {
+    text-decoration: none;
 }
 
 .pltitle {
-    font-family: 'Nanum Myeongjo', serif; 
     font-size: 36px;
     letter-spacing: 4px;
+    margin-bottom: 0;
+    transition:all 1s ease-in-out;
+}
+
+.pltitle, .ytlink {
+    font-family: 'Nanum Myeongjo', serif; 
     color: white;
     background-color: #D1C4BA;
     padding-left: 5%;
@@ -851,8 +863,18 @@ header {
     padding-top: 3%;
     padding-bottom: 3%;
     text-align: center;
-    transition:all 1s ease-in-out;
 }
+
+.pltitle:hover, .ytlink:hover {
+    background-color: #9B7D65;
+    transition:all .8s ease-in-out;
+}
+
+.ytlink:hover {
+    font-style: italic;
+    letter-spacing: 5px;
+}
+
 .songtitles {
     color: #9B7D65;
     font-family: 'Playfair Display', serif;
@@ -1016,9 +1038,6 @@ header {
         background-color: white;
         height: 200vh;
         overflow-x: hidden;
-        /* display: grid; 
-        grid-template-rows: auto auto auto;
-        grid-template-columns: auto; */
     }
     .abttext {
         width: 100vw;
@@ -3229,9 +3248,11 @@ header {
                 <div class = "songdiv">
                     <div class = "songbox" style = "background-image: url(images/trainride.jpeg);">
                         <div class = "songs">
-                            <p class = "pltitle">
-                                countryside train ride
-                            </p>
+                            <p class = "pltitle">countryside train ride</p>
+                            <a href="https://www.youtube.com/playlist?list=PLYEVTrERhSQvRYJod538YZyEfqEu7ry98">
+                            <p class = "ytlink">listen on youtube</p>
+                            </a>
+                       
                             <p class = "songtitles">
                                 + &nbsp;&nbsp; We Are Young // Fun.<br>
                                 + &nbsp;&nbsp; Drive By // Train<br>
@@ -3259,9 +3280,10 @@ header {
                     </div>
                     <div class = "songbox" style = "background-image: url(images/lastflight.jpeg)">
                         <div class = "songs">
-                            <p class = "pltitle">
-                                the last flight home 
-                            </p>
+                            <p class = "pltitle">the last flight home</p>
+                            <a href="https://www.youtube.com/playlist?list=PLYEVTrERhSQsRxV6i4L8Nw4MMPnL92c6x">
+                            <p class = "ytlink">listen on youtube</p>
+                            </a>
                             <p class = "songtitles">
                                 + &nbsp;&nbsp; 当你 // 王心凌<br>
                                 + &nbsp;&nbsp; 至少还有你 // 林俊杰<br>
